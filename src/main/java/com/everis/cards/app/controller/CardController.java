@@ -26,9 +26,9 @@ public class CardController {
   @ApiOperation(value = "Todas las tarjetas", response = CardResponse.class)
   @ApiResponse(code = 200, message = "Api ok", response = CardResponse.class)
   @GetMapping
-  public Observable<CardResponse> getCards(@RequestParam("documentNumber") String documentNumber) {
-   
+  public Observable<CardResponse> getAllCards(@RequestParam("documentNumber") String documentNumber) {
     return service.getAllCards(documentNumber);
+
   }
 
 }
